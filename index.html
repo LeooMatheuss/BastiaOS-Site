@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BastiaOS — Your system. Your fortress.</title>
+  <meta name="description" content="BastiaOS is an immutable, secure-by-default and fully reproducible Linux distribution with atomic updates, verified boot and a Wayland-native desktop.">
+  <meta name="theme-color" content="#0b1020">
+  <meta property="og:title" content="BastiaOS — Your system. Your fortress.">
+  <meta property="og:description" content="An immutable, secure-by-default and fully reproducible Linux distribution.">
+  <meta property="og:image" content="assets/img/boot-splash.svg">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="announce">
+    BastiaOS 0.1 <b>“Muralha”</b> is under active development. <a href="#roadmap">See the roadmap →</a>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><img src="assets/img/logo-mark.svg" alt="">BastiaOS</a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#editions">Editions</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="https://github.com/LeooMatheuss/bastiaos/tree/main/docs" target="_blank" rel="noopener">Docs</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="icon-link" href="https://github.com/LeooMatheuss/bastiaos" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="download.html" class="btn btn-primary btn-sm">Download</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container">
+        <div class="pill reveal"><b>New</b> Immutable core with atomic A/B updates</div>
+        <h1 class="reveal">Your system.<br><span class="grad-text">Your fortress.</span></h1>
+        <p class="lead reveal">BastiaOS is an immutable, secure-by-default Linux distribution — verified at every boot, rebuilt bit-for-bit from source and designed to stay out of your way.</p>
+        <div class="hero-actions reveal">
+          <a href="download.html" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+            Get BastiaOS 0.1
+          </a>
+          <a href="#features" class="btn btn-ghost">Explore features</a>
+        </div>
+        <p class="hero-meta reveal">x86_64 · Linux 6.x · systemd · Wayland · Free &amp; open source</p>
+
+        <div class="mockup-wrap">
+          <div class="mockup" id="mockup" aria-label="BastiaOS desktop preview" role="img">
+            <div class="mk-bar">
+              <div class="l"><span class="dot"></span><span>Activities</span><span class="ws"><i></i><i></i><i></i></span></div>
+              <div>Sat 31 Oct · 09:41</div>
+              <div class="r"><span>Wi-Fi</span><span>🔋 92%</span></div>
+            </div>
+            <div class="mk-win mk-term">
+              <div class="mk-head"><i></i><i></i><i></i><span>bastia@fortress: ~</span></div>
+<pre><span class="p">bastia@fortress</span>:<span class="c">~</span>$ bastia status
+<span class="d">●</span> Image      0.1.0-muralha <span class="ok">(verified)</span>
+<span class="d">●</span> Slot       A <span class="d">active</span> · B <span class="d">standby</span>
+<span class="d">●</span> Boot       Secure Boot <span class="ok">✓</span>  TPM2 <span class="ok">✓</span>
+<span class="d">●</span> Root       read-only · dm-verity <span class="ok">✓</span>
+
+<span class="p">bastia@fortress</span>:<span class="c">~</span>$ bastia update
+<span class="d">→</span> Fetching signed image 0.1.1 ......... <span class="ok">done</span>
+<span class="d">→</span> Writing to slot B ................. <span class="ok">done</span>
+<span class="ok">✓</span> Reboot to apply. Rollback is automatic.
+
+<span class="p">bastia@fortress</span>:<span class="c">~</span>$ <span class="cursor"></span></pre>
+            </div>
+            <div class="mk-win mk-set">
+              <div class="mk-head"><i></i><i></i><i></i><span>Settings · Security</span></div>
+              <div class="body">
+                <div class="row"><span class="ico"></span><div>Verified boot<small>Chain of trust is intact</small></div><span class="tog"></span></div>
+                <div class="row"><span class="ico b"></span><div>Automatic updates<small>Applied on next reboot</small></div><span class="tog"></span></div>
+                <div class="row"><span class="ico c"></span><div>App sandboxing<small>Flatpak permissions</small></div><span class="tog"></span></div>
+              </div>
+            </div>
+            <div class="mk-dock"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack">
+      <div class="container">
+        <p>Built on proven open-source foundations</p>
+        <ul>
+          <li>Linux</li><li>Buildroot</li><li>systemd</li><li>Wayland</li><li>Mesa</li><li>Flatpak</li><li>glibc</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why BastiaOS</span>
+          <h2>A modern OS that is <span class="grad-text">built to last</span></h2>
+          <p>Everything you expect from a Linux desktop — with a core that cannot silently break, drift or be tampered with.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg></div>
+            <h3>Immutable core</h3>
+            <p>The root filesystem is read-only. Your system stays exactly as it was shipped — no configuration drift, no surprises.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg></div>
+            <h3>Atomic updates</h3>
+            <p>Updates are written to a standby slot and switched in one step. If anything fails, BastiaOS rolls back on its own.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Verified boot</h3>
+            <p>UEFI Secure Boot, signed Unified Kernel Images, dm-verity and TPM2 measurements protect every step of startup.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+            <h3>Reproducible builds</h3>
+            <p>Same source, same bytes. Anyone can rebuild BastiaOS and verify it matches the official release.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5Z"/><path d="M3.3 7.5 12 12l8.7-4.5M12 21V12"/></svg></div>
+            <h3>Sandboxed apps</h3>
+            <p>Thousands of applications from Flathub, isolated from the base system with fine-grained permissions.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div>
+            <h3>Fast &amp; lightweight</h3>
+            <p>A minimal base with no bloat. Targeting under 10 seconds to desktop and less than 500 MB of RAM at idle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="security">
+      <div class="container split">
+        <div class="text reveal">
+          <span class="eyebrow">Security by design</span>
+          <h2>A chain of trust from <span class="grad-text">firmware to desktop</span></h2>
+          <p>Every component that runs during boot is cryptographically verified before it executes. If a single byte of the system image is altered, BastiaOS refuses to boot it.</p>
+          <ul class="checks">
+            <li>Signed Unified Kernel Images (UKI)</li>
+            <li>Read-only root protected by dm-verity</li>
+            <li>TPM2-measured boot and sealed secrets</li>
+            <li>Minimal attack surface and secure defaults</li>
+          </ul>
+        </div>
+        <div class="panel reveal">
+          <div class="chain">
+            <div class="chain-step"><span class="n">01</span><div><b>UEFI firmware</b><small>Secure Boot keys</small></div><span class="st">verified</span></div>
+            <div class="chain-step"><span class="n">02</span><div><b>Bootloader</b><small>Signed EFI binary</small></div><span class="st">verified</span></div>
+            <div class="chain-step"><span class="n">03</span><div><b>Unified Kernel Image</b><small>Kernel + initramfs + cmdline</small></div><span class="st">verified</span></div>
+            <div class="chain-step"><span class="n">04</span><div><b>System image</b><small>dm-verity root hash</small></div><span class="st">verified</span></div>
+            <div class="chain-step"><span class="n">05</span><div><b>Desktop session</b><small>Wayland · Flatpak sandbox</small></div><span class="st">ready</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split rev">
+        <div class="text reveal">
+          <span class="eyebrow">Atomic A/B updates</span>
+          <h2>Updates that <span class="grad-text">never break</span> your machine</h2>
+          <p>BastiaOS keeps two copies of the system. New versions are installed in the background to the inactive slot while you keep working. A reboot switches slots instantly — and if the new version fails to boot, you are back on the previous one automatically.</p>
+          <ul class="checks">
+            <li>No half-applied upgrades</li>
+            <li>Automatic rollback on failure</li>
+            <li>Signed, delta-friendly system images</li>
+          </ul>
+        </div>
+        <div class="panel reveal">
+          <div class="ab">
+            <div class="slot active"><h4>Slot A <span>active</span></h4><code>0.1.0-muralha</code><div class="bar"><i></i></div></div>
+            <div class="slot"><h4>Slot B <span>updating</span></h4><code>0.1.1-muralha</code><div class="bar"><i></i></div></div>
+            <div class="ab-foot">reboot → switch → verify → commit · or rollback</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split">
+        <div class="text reveal">
+          <span class="eyebrow">Transparent by default</span>
+          <h2>Built in the open, <span class="grad-text">verifiable by anyone</span></h2>
+          <p>BastiaOS is built with Buildroot from pinned, checksummed sources. Every architectural decision is documented in public ADRs, and every release ships with a full SBOM.</p>
+          <div class="hero-actions" style="justify-content:flex-start;margin-top:28px">
+            <a href="download.html#source" class="btn btn-ghost">Build from source</a>
+            <a href="https://github.com/LeooMatheuss/bastiaos/tree/main/docs/decisions" target="_blank" rel="noopener" class="btn btn-ghost">Read the ADRs</a>
+          </div>
+        </div>
+        <div class="term reveal">
+          <div class="term-head"><i></i><i></i><i></i><span>~/bastiaos</span></div>
+<pre><span class="p">$</span> ./scripts/setup-buildroot.sh
+<span class="d">=== BastiaOS Buildroot Setup Script ===</span>
+All required tools found.
+
+<span class="p">$</span> cd build/buildroot
+<span class="p">$</span> cp ../configs/bastiaos_defconfig .config
+<span class="p">$</span> make -j$(nproc)
+<span class="d">>>> linux · systemd · busybox · grub2</span>
+<span class="ok">✓</span> output/images/bzImage
+<span class="ok">✓</span> output/images/rootfs.ext2
+
+<span class="p">$</span> sha256sum output/images/* <span class="c"># reproducible</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="editions">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Editions</span>
+          <h2>One foundation, <span class="grad-text">every environment</span></h2>
+          <p>The same immutable, verified core — tailored for your desk, your servers and your devices.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card edition featured reveal">
+            <span class="tag">Recommended</span>
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>Desktop</h3>
+            <p>A polished Wayland desktop for everyday work, development and creativity.</p>
+            <ul><li>Wayland-native desktop</li><li>Flatpak &amp; Flathub ready</li><li>Automatic atomic updates</li></ul>
+            <a href="download.html" class="btn btn-primary">Download Desktop</a>
+          </article>
+          <article class="card edition reveal">
+            <span class="tag">Planned</span>
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></div>
+            <h3>Server</h3>
+            <p>A headless, hardened image for servers, containers and the cloud.</p>
+            <ul><li>Minimal headless image</li><li>OpenSSH &amp; container ready</li><li>Fleet-friendly updates</li></ul>
+            <a href="download.html" class="btn btn-ghost">Learn more</a>
+          </article>
+          <article class="card edition reveal">
+            <span class="tag">Planned</span>
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+            <h3>Core</h3>
+            <p>A tiny, appliance-style image for embedded, IoT and edge devices.</p>
+            <ul><li>Smallest possible footprint</li><li>Read-only by design</li><li>Built for long-term deployments</li></ul>
+            <a href="download.html" class="btn btn-ghost">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal"><b class="grad-text">&lt; 10s</b><span>Boot-to-desktop target</span></div>
+          <div class="stat reveal"><b class="grad-text">&lt; 500MB</b><span>RAM at idle target</span></div>
+          <div class="stat reveal"><b class="grad-text">100%</b><span>Built from source</span></div>
+          <div class="stat reveal"><b class="grad-text">0</b><span>Telemetry by default</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Roadmap</span>
+          <h2>The road to <span class="grad-text">0.1 “Muralha”</span></h2>
+          <p>BastiaOS is in pre-alpha. Here is where we are — and where we are going.</p>
+        </div>
+        <div class="timeline reveal">
+          <div class="tl now"><small>Phase 1 · in progress</small><h4>Foundation</h4><p>Build system, toolchain and first bootable image.</p></div>
+          <div class="tl"><small>Phase 2</small><h4>Core system</h4><p>Kernel, systemd, filesystem and networking.</p></div>
+          <div class="tl"><small>Phase 3</small><h4>Verified boot</h4><p>dm-verity, A/B updates, UKI and TPM2.</p></div>
+          <div class="tl"><small>Phase 4</small><h4>Desktop</h4><p>Wayland compositor, Mesa and display manager.</p></div>
+          <div class="tl"><small>Phase 5</small><h4>Experience</h4><p>Flatpak, settings tools and installer.</p></div>
+          <div class="tl"><small>Phase 6</small><h4>Release</h4><p>Testing, SBOM, audits and public 0.1.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="community" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="eyebrow">Join the community</span>
+          <h2>Help us build the <span class="grad-text">fortress</span></h2>
+          <p>BastiaOS is free and open source. Whether you write code, docs, design or just test builds — there is a place for you.</p>
+          <div class="hero-actions">
+            <a href="https://github.com/LeooMatheuss/bastiaos" target="_blank" rel="noopener" class="btn btn-primary">Contribute on GitHub</a>
+            <a href="https://github.com/LeooMatheuss/bastiaos/issues" target="_blank" rel="noopener" class="btn btn-ghost">Report an issue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="about">
+          <a href="index.html" class="brand"><img src="assets/img/logo-mark.svg" alt="">BastiaOS</a>
+          <p>An immutable, secure-by-default and fully reproducible Linux distribution.</p>
+        </div>
+        <div><h5>Product</h5><ul><li><a href="#features">Features</a></li><li><a href="#editions">Editions</a></li><li><a href="download.html">Download</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
+        <div><h5>Developers</h5><ul><li><a href="download.html#source">Build from source</a></li><li><a href="https://github.com/LeooMatheuss/bastiaos/tree/main/docs" target="_blank" rel="noopener">Documentation</a></li><li><a href="https://github.com/LeooMatheuss/bastiaos/tree/main/docs/decisions" target="_blank" rel="noopener">ADRs</a></li></ul></div>
+        <div><h5>Community</h5><ul><li><a href="https://github.com/LeooMatheuss/bastiaos" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://github.com/LeooMatheuss/bastiaos/issues" target="_blank" rel="noopener">Issues</a></li><li><a href="https://github.com/LeooMatheuss/bastiaos/pulls" target="_blank" rel="noopener">Pull requests</a></li></ul></div>
+        <div><h5>Project</h5><ul><li><a href="#security">Security</a></li><li><a href="https://github.com/LeooMatheuss/bastiaos/blob/main/README.md" target="_blank" rel="noopener">About</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> The BastiaOS Project. Linux® is a registered trademark of Linus Torvalds.</span>
+        <span>Design → Build → Test → Document → Improve</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
